@@ -3,143 +3,193 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Operations Hub - Info</title>
+  <title>Operations Cockpit - Info</title>
 
   <style>
     * {
       box-sizing: border-box;
     }
 
+    html,
     body {
       margin: 0;
+      min-height: 100%;
       font-family: Arial, Helvetica, sans-serif;
       background: #f5f6f8;
       color: #252525;
     }
 
+    body {
+      padding: 18px 22px;
+    }
+
     .page {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 50px 30px 70px;
     }
 
     .hero {
-      background: white;
-      border-radius: 18px;
-      padding: 45px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 22px 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .hero-left {
+      max-width: 760px;
     }
 
     .eyebrow {
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #666;
-      margin-bottom: 10px;
+      letter-spacing: 1.4px;
+      color: #777;
+      margin-bottom: 6px;
     }
 
     h1 {
-      margin: 0 0 15px;
-      font-size: 40px;
+      margin: 0 0 8px;
+      font-size: 30px;
       line-height: 1.1;
     }
 
     .hero p {
-      max-width: 800px;
-      font-size: 18px;
-      line-height: 1.6;
-      color: #555;
       margin: 0;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .hero-tagline {
+      min-width: 210px;
+      text-align: right;
+      font-size: 18px;
+      font-weight: 700;
+      color: #333;
     }
 
     .intro {
-      margin-bottom: 35px;
+      padding: 0 4px;
+      margin-bottom: 16px;
     }
 
     .intro h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
+      margin: 0 0 5px;
+      font-size: 18px;
     }
 
     .intro p {
-      line-height: 1.6;
-      color: #555;
-      max-width: 900px;
+      margin: 0;
+      max-width: 1100px;
+      font-size: 13.5px;
+      line-height: 1.45;
+      color: #5c5c5c;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
     }
 
     .card {
-      background: white;
-      border-radius: 16px;
-      padding: 28px;
-      min-height: 190px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+      background: #ffffff;
+      border-radius: 13px;
+      padding: 18px 20px;
+      min-height: 145px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.045);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
     }
 
     .icon {
-      font-size: 28px;
-      margin-bottom: 18px;
+      font-size: 23px;
+      margin-bottom: 9px;
     }
 
     .card h3 {
-      margin: 0 0 10px;
-      font-size: 20px;
+      margin: 0 0 6px;
+      font-size: 17px;
     }
 
     .card p {
       margin: 0;
-      color: #5e5e5e;
-      line-height: 1.55;
+      font-size: 13px;
+      line-height: 1.4;
+      color: #606060;
     }
 
     .footer-box {
-      margin-top: 30px;
+      margin-top: 15px;
       background: #252525;
-      color: white;
-      border-radius: 16px;
-      padding: 30px;
+      color: #ffffff;
+      border-radius: 13px;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
     }
 
     .footer-box h2 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 22px;
+      margin: 0;
+      font-size: 18px;
+      white-space: nowrap;
     }
 
     .footer-box p {
       margin: 0;
-      line-height: 1.6;
+      font-size: 13px;
+      line-height: 1.4;
       color: #e2e2e2;
     }
 
-    @media (max-width: 800px) {
-      .page {
-        padding: 25px 18px 40px;
+    @media (max-width: 1000px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .hero {
-        padding: 30px 25px;
+        align-items: flex-start;
       }
 
-      h1 {
-        font-size: 32px;
+      .hero-tagline {
+        display: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 12px;
       }
 
       .grid {
         grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .footer-box {
+        display: block;
+      }
+
+      .footer-box h2 {
+        margin-bottom: 6px;
       }
     }
   </style>
@@ -150,122 +200,99 @@
   <main class="page">
 
     <section class="hero">
-      <div class="eyebrow">Globe Travel Retail</div>
+      <div class="hero-left">
+        <div class="eyebrow">Globe Travel Retail</div>
 
-      <h1>Operations Hub</h1>
+        <h1>Operations Cockpit</h1>
 
-      <p>
-        One central place for Operations teams to access the tools, reports,
-        schedules, pictures and information they use every day.
-      </p>
+        <p>
+          One central place for Operations teams to access the main tools,
+          schedules, reports, pictures and information used every day.
+        </p>
+      </div>
+
+      <div class="hero-tagline">
+        One Cockpit.<br />
+        One Connection.
+      </div>
     </section>
-
 
     <section class="intro">
-
-      <h2>What is the Operations Hub?</h2>
-
-      <p>
-        The Operations Hub brings together the main Globe Travel Retail tools
-        into one Cockpit. Instead of searching through different links and
-        platforms, Operations teams can use one central access point to find
-        the information they need.
-      </p>
+      <h2>What is the Operations Cockpit?</h2>
 
       <p>
-        The objective is simple: make daily follow-up easier, improve visibility
-        and give teams faster access to operational and reporting information.
+        The Operations Cockpit brings together the main Globe Travel Retail tools
+        in one place. It gives teams a single starting point to quickly access
+        operational information, reporting and useful tools without searching
+        across different platforms.
       </p>
-
     </section>
-
 
     <section class="grid">
 
       <div class="card">
         <div class="icon">📷</div>
-
         <h3>Gallery</h3>
-
         <p>
-          Access Globe Travel Retail pictures from operations, activations
-          and campaigns in one central gallery.
+          Access Globe Travel Retail pictures from operations,
+          activations and campaigns in one central gallery.
         </p>
       </div>
 
-
       <div class="card">
         <div class="icon">📅</div>
-
         <h3>Schedules</h3>
-
         <p>
-          Access operational schedules through Power BI and the GI Schedule,
+          Access Power BI schedules and the GI Schedule,
           directly connected to GI.
         </p>
       </div>
 
-
       <div class="card">
         <div class="icon">📊</div>
-
         <h3>Insights & Reporting</h3>
-
         <p>
-          Follow reporting activity, reporting compliance and performance
-          through dedicated dashboards and reporting tools.
+          Follow reporting activity, compliance and performance
+          through dedicated dashboards.
         </p>
       </div>
-
 
       <div class="card">
         <div class="icon">📈</div>
-
-        <h3>Performance Reports</h3>
-
+        <h3>Other Reports</h3>
         <p>
-          Access additional reports and dashboards used to follow client,
-          campaign and operational performance.
+          Access additional reports used to follow campaigns,
+          clients and operational performance.
         </p>
       </div>
-
 
       <div class="card">
         <div class="icon">🎓</div>
-
         <h3>Coaching & Training</h3>
-
         <p>
-          Find tools and information related to coaching, training and
-          promoter development.
+          Find tools and information related to coaching,
+          training and promoter development.
         </p>
       </div>
 
-
       <div class="card">
         <div class="icon">🛠️</div>
-
         <h3>Operational Tools</h3>
-
         <p>
-          Access additional tools created to support Operations teams,
-          simplify daily tasks and centralise useful information.
+          Access other useful tools designed to support
+          Operations teams and simplify daily follow-up.
         </p>
       </div>
 
     </section>
 
-
     <section class="footer-box">
-
-      <h2>One Hub. One Connection.</h2>
+      <h2>One Cockpit. One Connection.</h2>
 
       <p>
-        The Cockpit is designed to give Operations teams a single starting
-        point for their daily tools and information — making it easier to
-        access, follow and manage Travel Retail operations.
+        A single access point for the tools and information needed to manage
+        and follow Travel Retail operations efficiently.
       </p>
-
     </section>
 
   </main>
