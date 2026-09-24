@@ -71,15 +71,15 @@
 
     /* LOGO */
     .logo-area {
-      min-width: 220px;
+      min-width: 300px;
       display: flex;
       justify-content: flex-end;
       align-items: center;
     }
 
     .logo-area img {
-      width: 190px;
-      max-height: 80px;
+      width: 280px;
+      max-height: 110px;
       object-fit: contain;
       display: block;
     }
@@ -134,8 +134,13 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .logo-area {
+        min-width: 220px;
+      }
+
       .logo-area img {
-        width: 150px;
+        width: 220px;
+        max-height: 95px;
       }
     }
 
@@ -153,10 +158,12 @@
       .logo-area {
         justify-content: flex-start;
         margin-top: 18px;
+        min-width: 0;
       }
 
       .logo-area img {
-        width: 150px;
+        width: 200px;
+        max-height: 90px;
       }
 
       h1 {
