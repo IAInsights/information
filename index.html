@@ -28,14 +28,12 @@
       margin: 0 auto;
     }
 
-    /* TOP CARD */
     .hero {
       background: #ffffff;
       border-radius: 14px;
       padding: 24px 28px;
       margin-bottom: 16px;
       box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -69,7 +67,6 @@
       color: #555;
     }
 
-    /* LOGO */
     .logo-area {
       min-width: 300px;
       display: flex;
@@ -84,7 +81,6 @@
       display: block;
     }
 
-    /* CARDS */
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -112,7 +108,6 @@
       color: #606060;
     }
 
-    /* BOTTOM BAR */
     .footer-box {
       margin-top: 15px;
       background: #252525;
@@ -128,7 +123,6 @@
       color: #e2e2e2;
     }
 
-    /* TABLET */
     @media (max-width: 1000px) {
       .grid {
         grid-template-columns: repeat(2, 1fr);
@@ -144,7 +138,6 @@
       }
     }
 
-    /* MOBILE */
     @media (max-width: 700px) {
       body {
         padding: 12px;
@@ -178,41 +171,23 @@
 </head>
 
 <body>
-
   <main class="page">
 
-    <!-- TOP CARD -->
     <section class="hero">
-
       <div class="hero-left">
-
-        <div class="eyebrow">
-          Globe Travel Retail
-        </div>
-
-        <h1>
-          One Cockpit. One Connection.
-        </h1>
-
+        <div class="eyebrow">Globe Travel Retail</div>
+        <h1>One Cockpit. One Connection.</h1>
         <p>
           One central place for Operations teams to access the main tools,
           schedules, reports, pictures and information used every day.
         </p>
-
       </div>
 
-      <!-- GLOBE LOGO -->
       <div class="logo-area">
-        <img
-          src="./globe-logo.png"
-          alt="Globe Travel Retail Logo"
-        />
+        <img src="./globe-logo.png" alt="Globe Travel Retail Logo" />
       </div>
-
     </section>
 
-
-    <!-- CARDS -->
     <section class="grid">
 
       <div class="card">
@@ -231,17 +206,18 @@
       </div>
 
       <div class="card">
-        <h3>Power BI</h3>
-        <p>
-          Direct access to Power BI dashboards and workspaces.
-        </p>
-      </div>
-
-      <div class="card">
         <h3>Clients Reports</h3>
         <p>
           Access to different client reports: Spirits, Confectionery,
           P&amp;C, Store Check, Space Tracking and Activations.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Coaching &amp; Training</h3>
+        <p>
+          Find tools and information related to coaching,
+          training and promoter development.
         </p>
       </div>
 
@@ -255,17 +231,15 @@
       </div>
 
       <div class="card">
-        <h3>Coaching &amp; Training</h3>
+        <h3>Power BI (External Link)</h3>
         <p>
-          Find tools and information related to coaching,
-          training and promoter development.
+          Direct access to Power BI dashboards and workspaces.
+          Access permissions are required.
         </p>
       </div>
 
     </section>
 
-
-    <!-- BOTTOM BAR -->
     <section class="footer-box">
       <p>
         A single access point for the tools and information needed to manage
@@ -274,6 +248,5 @@
     </section>
 
   </main>
-
 </body>
 </html>
