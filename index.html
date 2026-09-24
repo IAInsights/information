@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Operations Cockpit - Info</title>
+  <title>One Cockpit. One Connection.</title>
 
   <style>
     * {
@@ -31,7 +31,7 @@
     .hero {
       background: #ffffff;
       border-radius: 14px;
-      padding: 22px 28px;
+      padding: 24px 28px;
       margin-bottom: 16px;
       box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
       display: flex;
@@ -41,7 +41,7 @@
     }
 
     .hero-left {
-      max-width: 760px;
+      max-width: 850px;
     }
 
     .eyebrow {
@@ -66,30 +66,17 @@
       color: #555;
     }
 
-    .hero-tagline {
-      min-width: 210px;
-      text-align: right;
-      font-size: 18px;
-      font-weight: 700;
-      color: #333;
+    .logo-area {
+      min-width: 180px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
     }
 
-    .intro {
-      padding: 0 4px;
-      margin-bottom: 16px;
-    }
-
-    .intro h2 {
-      margin: 0 0 5px;
-      font-size: 18px;
-    }
-
-    .intro p {
-      margin: 0;
-      max-width: 1100px;
-      font-size: 13.5px;
-      line-height: 1.45;
-      color: #5c5c5c;
+    .logo-area img {
+      max-width: 150px;
+      max-height: 60px;
+      object-fit: contain;
     }
 
     .grid {
@@ -101,31 +88,20 @@
     .card {
       background: #ffffff;
       border-radius: 13px;
-      padding: 18px 20px;
-      min-height: 145px;
+      padding: 20px;
+      min-height: 135px;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.045);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
-    }
-
-    .icon {
-      font-size: 23px;
-      margin-bottom: 9px;
     }
 
     .card h3 {
-      margin: 0 0 6px;
+      margin: 0 0 8px;
       font-size: 17px;
     }
 
     .card p {
       margin: 0;
       font-size: 13px;
-      line-height: 1.4;
+      line-height: 1.45;
       color: #606060;
     }
 
@@ -135,15 +111,6 @@
       color: #ffffff;
       border-radius: 13px;
       padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      gap: 22px;
-    }
-
-    .footer-box h2 {
-      margin: 0;
-      font-size: 18px;
-      white-space: nowrap;
     }
 
     .footer-box p {
@@ -161,10 +128,6 @@
       .hero {
         align-items: flex-start;
       }
-
-      .hero-tagline {
-        display: none;
-      }
     }
 
     @media (max-width: 700px) {
@@ -172,24 +135,22 @@
         padding: 12px;
       }
 
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
       .hero {
         padding: 20px;
+        display: block;
+      }
+
+      .logo-area {
+        justify-content: flex-start;
+        margin-top: 18px;
       }
 
       h1 {
         font-size: 26px;
       }
 
-      .footer-box {
-        display: block;
-      }
-
-      .footer-box h2 {
-        margin-bottom: 6px;
+      .grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -203,7 +164,7 @@
       <div class="hero-left">
         <div class="eyebrow">Globe Travel Retail</div>
 
-        <h1>Operations Cockpit</h1>
+        <h1>One Cockpit. One Connection.</h1>
 
         <p>
           One central place for Operations teams to access the main tools,
@@ -211,27 +172,14 @@
         </p>
       </div>
 
-      <div class="hero-tagline">
-        One Cockpit.<br />
-        One Connection.
+      <div class="logo-area">
+        <img src="./globe-logo.png" alt="Globe Travel Retail Logo" />
       </div>
-    </section>
-
-    <section class="intro">
-      <h2>What is the Operations Cockpit?</h2>
-
-      <p>
-        The Operations Cockpit brings together the main Globe Travel Retail tools
-        in one place. It gives teams a single starting point to quickly access
-        operational information, reporting and useful tools without searching
-        across different platforms.
-      </p>
     </section>
 
     <section class="grid">
 
       <div class="card">
-        <div class="icon">📷</div>
         <h3>Gallery</h3>
         <p>
           Access Globe Travel Retail pictures from operations,
@@ -240,55 +188,47 @@
       </div>
 
       <div class="card">
-        <div class="icon">📅</div>
-        <h3>Schedules</h3>
+        <h3>Schedule GI Viewer</h3>
         <p>
-          Access Power BI schedules and the GI Schedule,
-          directly connected to GI.
+          Access GI Schedules directly connected to Globe Intelligence.
         </p>
       </div>
 
       <div class="card">
-        <div class="icon">📊</div>
-        <h3>Insights & Reporting</h3>
+        <h3>Power BI</h3>
         <p>
-          Follow reporting activity, compliance and performance
-          through dedicated dashboards.
+          Direct access to Power BI dashboards and workspaces.
         </p>
       </div>
 
       <div class="card">
-        <div class="icon">📈</div>
-        <h3>Other Reports</h3>
+        <h3>Clients Reports</h3>
         <p>
-          Access additional reports used to follow campaigns,
-          clients and operational performance.
+          Access to different client reports: Spirits, Confectionery,
+          P&amp;C, Store Check, Space Tracking and Activations.
         </p>
       </div>
 
       <div class="card">
-        <div class="icon">🎓</div>
-        <h3>Coaching & Training</h3>
+        <h3>Compliances</h3>
+        <p>
+          Access useful tools designed to support Operations teams and simplify
+          daily follow-up, including schedule and report compliance,
+          and coverage KPIs from GI.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Coaching &amp; Training</h3>
         <p>
           Find tools and information related to coaching,
           training and promoter development.
         </p>
       </div>
 
-      <div class="card">
-        <div class="icon">🛠️</div>
-        <h3>Operational Tools</h3>
-        <p>
-          Access other useful tools designed to support
-          Operations teams and simplify daily follow-up.
-        </p>
-      </div>
-
     </section>
 
     <section class="footer-box">
-      <h2>One Cockpit. One Connection.</h2>
-
       <p>
         A single access point for the tools and information needed to manage
         and follow Travel Retail operations efficiently.
